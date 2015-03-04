@@ -4,7 +4,7 @@ var App = (function() {
   var $filesDiv, fileRootID, $detailsBar, $moveFile, $copyFile, $whereSelect, rootURL;
 
   var init = function() {
-    rootURL = 'https://enigmatic-mesa-2291.herokuapp.com/';
+    rootURL = 'https://enigmatic-mesa-2291.herokuapp.com';
     $whereSelect = $('#whereSelect');
     $detailsBar = $('#fileInfo');
     $moveFile = $('#moveFile');
@@ -56,7 +56,7 @@ var App = (function() {
 
     // This isn't the smoothest ever
     if (file.kind === 'directory') {
-      $fileLink.prop('href', '/?fs_item=' + file.id );
+      $fileLink.prop('href', '?fs_item=' + file.id );
       var icon = '<span class=\'glyphicon glyphicon-folder-close\'>';
       $fileLink.prepend(icon);
     } else {
